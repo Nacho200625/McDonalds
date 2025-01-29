@@ -53,7 +53,7 @@ nav ul li ul li:hover{
 footer {  
     height: 380px;
     position: relative;
-    top: 1135px;
+    top: 1150px;
 
 }
 
@@ -272,7 +272,7 @@ nav ul li ul{
     width: 480px;
     background-color: white;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 .br{
     border-radius: 4px;
