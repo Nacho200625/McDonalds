@@ -42,7 +42,9 @@ main {
     background-image: url(../img/grande.jpg);
     color: #565655;
     height: 640px;
+ 
 }
+
 nav ul li:hover{
     background-image: url(../img/gotas.png);
 }
