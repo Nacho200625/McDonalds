@@ -1,0 +1,384 @@
+/* nuestro root html tiene un font-size de 16px por defecto
+ equivalente a 1rem. rem es medida con respecto a root (html) 
+Utilizar rem para fuente pues se adapta a las distintas resoluciones */
+
+/* Solo si para páginas fullscreen sin barra de desplamiento */
+html, body {
+/*    height: 100%;*/
+}
+
+/* Definición de la fuente local */
+@font-face {
+    font-family: "sst";
+    src: url(../font/fontmcd.woff2);
+}
+
+/* Tamaño de la caja de borde a borde 
+padding y borde no modifica el tamaño del elemento */
+* {
+    box-sizing: border-box;
+}
+
+/* Reglas comunes a todos los elementos en body 
+margin:0 para quitar ese pequeño enmarcado blanco indeseable */
+body {
+    margin: 0;
+   font-family: "sst";
+}
+.container {    
+   width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    height: 90px;
+    background-color: white;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+main {
+    margin: 0 auto;
+    background-image: url(../img/grande.jpg);
+    color: #565655;
+    height: 640px;
+}
+nav ul li:hover{
+    background-image: url(../img/gotas.png);
+}
+nav ul li ul li:hover{
+    background-image: url(../img/gotas.png);
+}
+
+footer {  
+    height: 380px;
+    position: relative;
+    top: 1135px;
+
+}
+
+/* flex orientación row */
+.row {
+    display: flex;
+}
+/* flex orientación column */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alineación eje principal center */
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Alineación eje principal space beetween 
+si row = 1º y ultimo en izq y der resto reparten espacio
+si column =  1º y ultimo en arriba y abajo resto reparten espacio */
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/* Alineación eje principal end
+si row = derecha
+si column = abajo */
+.justify-content-end {
+    justify-content: end;
+}
+
+/* Alineación eje secundario center 
+si row = centrado verticalmente
+si column = centrado horizontalmente */
+.align-items-center {
+    align-items: center;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+/* Flotación */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* limpiar flotación */
+.cb {
+    clear: both;
+}
+
+/* Position */
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* Alineación del Texto centro */
+.text-center {
+    text-align: center;
+}
+
+/* Alineación del Texto derecha */
+.text-end {
+    text-align: end;
+}
+
+/* Fondo y texto negro y blanco */
+.bg-black {
+    background-color: black;
+}
+
+.text-black {
+    color: black;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-white {
+    color: white;
+}
+
+/* Reglas comunes botones */
+.btn {
+/*
+    border: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;*/
+}
+
+/* Reglas específicas botón azul */
+.btn-blue {
+/*    background-color: #304a70;
+    color: white;*/
+}
+
+/* Reglas para las cajas de formularios */
+.box-form {
+/*    
+    border: solid 1px rgb(230, 228, 228);
+    background-color: #4d77a1;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;*/
+}
+.shadow {
+    box-shadow: 0 0 10px gainsboro;
+}
+
+
+nav ul, nav li {
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul{
+    color: black;
+}
+nav ul li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    
+}
+nav ul li ul {
+    position: absolute;
+    display: none;
+}
+nav li:hover ul {
+    display: block;
+   
+}
+nav{
+    margin-left: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li ul li:hover{
+    background-color: #ffbc0f;
+    border-radius: 10px;
+    
+    
+}
+nav ul li ul li{
+    padding:10px 0;
+    width: 300px;
+    margin: 0;
+    border-radius: 10px;
+    border: solid 1px gainsboro;
+}
+nav ul li ul{
+    background-color: white;
+    padding-top: 20px;
+}
+.mt{
+    margin-left: 20px;
+}
+.mt1{
+    margin-left: 10px;
+}
+.mr{
+    margin-right: 10px;
+}
+.col-25{
+    width: 25%;
+}
+.gr{
+    background-color: #dcdcdc;
+    color: #8e8e8e;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+.mrh{
+    margin-right:180px ;
+    margin-top: -90px;
+}
+.card{
+    box-shadow:0 0 2.5px;
+    height: 575px;
+    width: 480px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.br{
+    border-radius: 4px;
+}
+.button{
+    background-color: #f5bf45;
+    color: black;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-right: 17px;
+}
+.mr25{
+    margin-right: 25px;
+}
+.card2{
+    box-shadow: 0 0 2px;
+    margin-top: 10px;
+    height: 330px;
+    width: 302px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+.button2{
+    background-color: #f5bf45;
+    color: black;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-right: 17px;
+    margin-top: 0px;
+}
+.ml{
+    margin-left: 40px;
+}
+.button3{
+    background-color: #f5bf45;
+    color: black;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-right: 17px;
+    margin-top: 40px;
+}
+.m1{
+    margin-top: -4px;
+}
+.mrr{
+    margin-left: 125px;
+}
+.mrrr{
+    margin-left: 80px;
+}
+.mtt{
+    margin-top: 40px;
+}
+.m0{
+    margin-left: 5px;
+}
+.yt{
+    margin-left: 120px;
+}
+.container3{
+    height: 90px;
+    width: 100%;
+    background-color: #f5bf45;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+.ytt{
+margin-left: 80px;
+}
+.button4{
+    background-color: #dcdcdc;
+    color: black;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-right: 17px;
+    margin-top: 40px;
+}
+.container25 {    
+    width: 85%;
+     margin: 0 auto;
+ }
+ hr{
+    border-color: black;
+    width: 80%;
+ }
+ .mtttt{
+    margin-top: 30px;
+ }
+ .mb{
+    margin-bottom: 10px;
+ }
+.mll{
+    margin-left: 10px;
+}
+.s{
+    font-size: 10px;
+}
+.mrr{
+    margin-right:4px;
+}
+.container26 {    
+    width: 80%;
+     margin: 0 auto;
+ }
